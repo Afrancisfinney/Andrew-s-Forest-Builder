@@ -8,7 +8,7 @@ public class Tiger extends Animal {
     private String distinctiveFeature;
 
     public Tiger() {
-        super("Tiger");
+        super("Tiger",2.9);
         this.numClaws = 18;
         this.numTeeth = 30;
         this.color = "Orange with black stripes";

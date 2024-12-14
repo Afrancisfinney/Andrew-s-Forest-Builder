@@ -3,40 +3,32 @@ import java.util.Scanner;
 public class Forestclass {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Animal forest = new Animal("Forest");
+        Forest forest = new Forest(); 
         boolean keepGoing = true;
-                System.out.println("Welcome To Andrew's Forest Builder");
+
         while (keepGoing) {
-            System.out.println("Is your animal a rainforest animal or a desert animal? (rainforest/desert)");
+            System.out.println("Is the forest wet or dry?");
             String forestType = scanner.nextLine();
 
-            if (forestType.equalsIgnoreCase("rainforest")) {
+            if (forestType.equalsIgnoreCase("wet")) {
                 System.out.println("Choose an animal: Panther or Tiger?");
                 String animalChoice = scanner.nextLine();
 
                 if (animalChoice.equalsIgnoreCase("Panther")) {
-                    Panther panther = new Panther();
-                    forest.addAnimal(panther);
-                    System.out.println(panther.getDetails());
+                    forest.addAnimal(new Panther());
                 } else if (animalChoice.equalsIgnoreCase("Tiger")) {
-                    Tiger tiger = new Tiger();
-                    forest.addAnimal(tiger);
-                    System.out.println(tiger.getDetails());
+                    forest.addAnimal(new Tiger());
                 } else {
                     System.out.println("Invalid choice.");
                 }
-            } else if (forestType.equalsIgnoreCase("desert")) {
+            } else if (forestType.equalsIgnoreCase("dry")) {
                 System.out.println("Choose an animal: Lion or Cheetah?");
                 String animalChoice = scanner.nextLine();
 
                 if (animalChoice.equalsIgnoreCase("Lion")) {
-                    Lion lion = new Lion();
-                    forest.addAnimal(lion);
-                    System.out.println(lion.getDetails());
+                    forest.addAnimal(new Lion());
                 } else if (animalChoice.equalsIgnoreCase("Cheetah")) {
-                    Cheetah cheetah = new Cheetah();
-                    forest.addAnimal(cheetah);
-                    System.out.println(cheetah.getDetails());
+                    forest.addAnimal(new Cheetah());
                 } else {
                     System.out.println("Invalid choice.");
                 }
@@ -52,7 +44,7 @@ public class Forestclass {
         }
 
         System.out.println("\n--- Summary of Animals in the Forest ---");
-        forest.displayAnimals();
+        forest.displayAnimals(); 
 
         scanner.close();
     }

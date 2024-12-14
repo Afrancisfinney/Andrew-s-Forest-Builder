@@ -1,30 +1,27 @@
-import java.util.ArrayList;
-
 public class Animal {
     private String type; 
-    private ArrayList<Animal> animals;
+    private double size; 
 
-    public Animal(String type) {
+    public Animal(String type, double size) {
         this.type = type;
-        this.animals = new ArrayList<>();
+        this.size = size; 
     }
 
     public String getType() {
         return type;
     }
 
-    public void addAnimal(Animal animal) {
-        animals.add(animal);
+    public double getSize() {
+        return size;
     }
 
-    public void displayAnimals() {
-        if (animals.isEmpty()) {
-            System.out.println("No animals in the forest.");
+    public String compareSize(Animal other) {
+        if (this.size > other.size) {
+            return this.getType() + " is larger than " + other.getType();
+        } else if (this.size < other.size) {
+            return other.getType() + " is larger than " + this.getType();
         } else {
-            System.out.println("Animals in the forest:");
-            for (Animal animal : animals) {
-                System.out.println("- " + animal.getType());
-            }
+            return this.getType() + " and " + other.getType() + " are the same size.";
         }
     }
 }
