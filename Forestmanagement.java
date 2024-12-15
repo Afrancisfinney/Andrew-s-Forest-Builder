@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
-public class Forest {
+public class Forestmanagement {
     private ArrayList<Animal> animals; 
 
-    public Forest() {
+    public Forestmanagement() {
         this.animals = new ArrayList<>();
     }
 

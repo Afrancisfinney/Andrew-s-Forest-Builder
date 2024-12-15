@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class Forestclass {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Forest forest = new Forest(); 
+        Forestmanagement forest = new Forestmanagement(); 
         boolean keepGoing = true;
-
+            System.out.println("Welcome to Andrew's  Forest Builder");
         while (keepGoing) {
-            System.out.println("Is the forest wet or dry?");
+            System.out.println("Is the forest you chose a rainforest or a desert?  (rainforest/desert) ");
             String forestType = scanner.nextLine();
 
-            if (forestType.equalsIgnoreCase("wet")) {
+            if (forestType.equalsIgnoreCase("rainforest")) {
                 System.out.println("Choose an animal: Panther or Tiger?");
                 String animalChoice = scanner.nextLine();
 
@@ -21,7 +21,7 @@ public class Forestclass {
                 } else {
                     System.out.println("Invalid choice.");
                 }
-            } else if (forestType.equalsIgnoreCase("dry")) {
+            } else if (forestType.equalsIgnoreCase("desert")) {
                 System.out.println("Choose an animal: Lion or Cheetah?");
                 String animalChoice = scanner.nextLine();
 
